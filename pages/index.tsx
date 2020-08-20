@@ -1,8 +1,7 @@
-// @generated: @expo/next-adapter@2.1.9
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-// React;
-// Text;
+React;
+Text;
 // View;
 export default function App() {
   return pug`

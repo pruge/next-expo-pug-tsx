@@ -10,9 +10,8 @@ const withPlugins = require('next-compose-plugins');
 
 const nextConfig = {
   webpack(config, options) {
-    console.log('========= nextConfig');
     config.module.rules.push({
-      test: /\.(tsx)$/,
+      test: /\.(ts|tsx)$/,
       use: [
         'babel-loader',
         {
@@ -28,13 +27,6 @@ const nextConfig = {
 };
 
 module.exports = withPlugins(
-  [
-    [
-      withExpo,
-      {
-        projectRoot: __dirname,
-      },
-    ],
-  ],
+  [[withExpo, { projectRoot: __dirname }]],
   nextConfig,
 );
