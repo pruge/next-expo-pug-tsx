@@ -1,8 +1,40 @@
 // @generated: @expo/next-adapter@2.1.9
 // Learn more: https://github.com/expo/expo/blob/master/docs/pages/versions/unversioned/guides/using-nextjs.md#withexpo
 
-const { withExpo } = require('@expo/next-adapter')
+const { withExpo } = require('@expo/next-adapter');
+const withPlugins = require('next-compose-plugins');
+// const withTM = require('next-transpile-modules')([
+//   // Add the name of your package here...
+//   '@ui-kitten/components',
+// ]);
 
-module.exports = withExpo({
-  projectRoot: __dirname,
-})
+const nextConfig = {
+  webpack(config, options) {
+    console.log('========= nextConfig');
+    config.module.rules.push({
+      test: /\.(tsx)$/,
+      use: [
+        'babel-loader',
+        {
+          loader: 'webpack-preprocessor-pug-tsx',
+          options: {
+            start: ['gql`', '\\{`'],
+          },
+        },
+      ],
+    });
+    return config;
+  },
+};
+
+module.exports = withPlugins(
+  [
+    [
+      withExpo,
+      {
+        projectRoot: __dirname,
+      },
+    ],
+  ],
+  nextConfig,
+);

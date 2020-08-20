@@ -14,21 +14,31 @@
     "type-check": "tsc"
   },
   "dependencies": {
-    "expo": "~37.0.3",
+    "expo": "~38.0.9",
     "next": "latest",
-    "react": "~16.9.0",
-    "react-dom": "~16.9.0",
+    "next-images": "1.4.1",
+    "next-transpile-modules": "4.1.0",
+    "react": "~16.13.1",
+    "react-dom": "~16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.1.tar.gz",
-    "react-native-web": "~0.11.7"
+    "react-native-web": "~0.13.8"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
-    "@expo/next-adapter": "2.1.9",
-    "@types/node": "14.0.4",
-    "@types/react": "16.9.35",
+    "@expo/next-adapter": "2.1.25",
+    "@types/node": "14.6.0",
+    "@types/react": "16.9.46",
     "@types/react-dom": "16.9.8",
-    "@types/react-native": "0.62.10",
-    "babel-preset-expo": "~8.1.0",
-    "typescript": "3.9.3"
+    "@types/react-native": "0.63.8",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-jsx-classname-components": "^0.0.3",
+    "babel-plugin-transform-react-pug": "^7.0.1",
+    "babel-preset-expo": "~8.2.3",
+    "eslint": "^7.6.0",
+    "eslint-plugin-react-pug": "^0.8.4",
+    "next-compose-plugins": "^2.2.0",
+    "typescript": "3.9.7",
+    "webpack-preprocessor-pug-tsx": "^0.6.8"
   }
 }

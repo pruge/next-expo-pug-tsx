@@ -1,0 +1,7 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["react-pug"],
+  "rules": {
+    "no-unused-vars": 0
+  }
+}
