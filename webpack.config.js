@@ -5,13 +5,13 @@ module.exports = async function (env, argv) {
   const config = await createExpoWebpackConfigAsync(env, argv);
 
   config.module.rules.push({
-    test: /\.(ts|tsx)$/,
+    test: /\.(tsx)$/,
     use: [
       'babel-loader',
       {
         loader: 'webpack-preprocessor-pug-tsx',
         options: {
-          start: ['gql`', '\\{`'],
+          start: ['gql`'],
         },
       },
     ],

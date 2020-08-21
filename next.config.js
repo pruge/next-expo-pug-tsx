@@ -11,7 +11,7 @@ const withPlugins = require('next-compose-plugins');
 const nextConfig = {
   webpack(config, options) {
     config.module.rules.push({
-      test: /\.(ts|tsx)$/,
+      test: /\.(tsx)$/,
       use: [
         'babel-loader',
         {
